@@ -2,8 +2,7 @@
     box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
     height: 100%;
     font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
     background: rgb(245, 245, 245);
@@ -16,7 +15,6 @@ input[type='checkbox'] {
 
 .todo-app__root {
     margin: 0 auto;
-    /* margin-top: 7em; */
     width: 50em;
     display: flex;
     flex-direction: column;
@@ -76,7 +74,6 @@ input[type='checkbox'] {
     list-style: none;
     padding: 0;
     margin: 0;
-    /* 5*5=25 */
     max-height: 23em;
     overflow: scroll;
 }
@@ -108,14 +105,12 @@ input[type='checkbox'] {
     width: 20px;
     height: 20px;
     border-radius: 100px;
-
     transition: all 0.5s ease;
     cursor: pointer;
     position: absolute;
     top: 5px;
     left: 5px;
     z-index: 1;
-
     background: rgba(99, 99, 99, 0.698);
     box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.312);
 }
@@ -171,14 +166,12 @@ input[type='checkbox'] {
     cursor: pointer;
 }
 
-
-
 .todo-app__view-buttons button:focus {
     outline: none;
 }
 
 .todo-app__view-buttons button:hover {
-    transform: scale(1.2,1.2);
+    transform: scale(1.2, 1.2);
 }
 
 .todo-app__clean {
