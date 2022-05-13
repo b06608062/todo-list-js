@@ -18,7 +18,7 @@ inp.addEventListener("keydown", function(e) {
             show_completed();
         }
     }
-})
+});
 
 class Item {
     constructor(todo, index) {
@@ -46,7 +46,7 @@ class Item {
                 show_completed();
             }
             show_clear_completed_btn();
-        })
+        });
         let lab = document.createElement("label");
         lab.setAttribute("for", index);
         check_box.appendChild(inp);
@@ -66,7 +66,7 @@ class Item {
             total_item -= 1;
             footer_control();
             show_clear_completed_btn();
-        })
+        });
         // append
         this.li.appendChild(check_box);
         this.li.appendChild(item_detail);
@@ -78,7 +78,7 @@ class Item {
     get item_node() {
         return this.li;
     }
-}
+};
 
 function footer_control() {
     let footer = document.getElementById("todo-footer");
@@ -90,7 +90,7 @@ function footer_control() {
 
     let count_screen = document.getElementsByClassName("todo-app__total");
     count_screen[0].innerHTML = `${count_left()} left`;
-}
+};
 
 function count_left() {
     let left_item = 0;
@@ -101,7 +101,7 @@ function count_left() {
     }
 
     return left_item;
-}
+};
 
 function show_all() {
     mode = 0;
@@ -109,7 +109,7 @@ function show_all() {
     for ([key, value] of Object.entries(todos)) {     
         value.style.display = "flex";
     }
-}
+};
 
 function show_active() {
     mode = 1;
@@ -121,7 +121,7 @@ function show_active() {
             value.style.display = "none";
         }
     }
-}
+};
 
 function show_completed() {
     mode = 2;
@@ -133,7 +133,7 @@ function show_completed() {
             value.style.display = "none";
         }
     }
-}
+};
 
 function clear_completed() {
     for ([key, value] of Object.entries(todos)) {  
@@ -145,7 +145,7 @@ function clear_completed() {
     }
     footer_control();
     show_clear_completed_btn();
-}
+};
 
 function show_clear_completed_btn() {
     let clean = document.getElementById("clean");
@@ -154,7 +154,7 @@ function show_clear_completed_btn() {
     } else {
         clean.style.visibility = "visible";
     }
-}
+};
 
 function btn_highlight(N) {
     for (i = 0; i <= 2; i++) {
@@ -164,7 +164,7 @@ function btn_highlight(N) {
             btn_list[i].style.outline = "0px"; 
         }
     }
-}
+};
 
 footer_control();
 btn_highlight(mode);
